@@ -2,24 +2,26 @@ import ATV from 'atvjs';
 
 import template from './template.hbs';
 
+
 let Page = ATV.Page.create({
-	name: 'home',
-	template: template,
+	name: 'list-games',
+    template: template,
+    data: function(response) {
+        return response;
+    },
     ready(options, resolve, reject) {
-        let heheGames = options.baseAPI + 'games';
-        let data = {
+        let heheGames = 'http://hehestreams.xyz/api/v1/nba/games';
+        let key = {
             ApiKey: 'igLnX4x2'
         };
          ATV
         .Ajax
-        .get(heheGames, {headers:data})
+        .get(heheGames, {headers:key})
         .then((xhr) => {
             let response = xhr.response;
             resolve({
-                name: response.name,
-                message: response.message
+                data: response
             });
-            console.log(response);
         }, (xhr) => {
             let response = xhr.response;
             reject({
@@ -27,16 +29,15 @@ let Page = ATV.Page.create({
                 message: response.message
             });
         });
-	},
+    },
 	events: {
 		select: 'onSelect'
 	},
 	onSelect(e) {
 		let element = e.target;
-		let menuNavigation = element.getAttribute('data-href-menu');
-
-		if (menuNavigation) {
-			ATV.Navigation.navigateToMenuPage();
+		let uuid = element.getAttribute('data-uuid');
+		if (uuid) {
+			ATV.Navigation.navigate('select-stream', {uuid : uuid});
 		}
 	}
 });

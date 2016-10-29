@@ -41,7 +41,7 @@ ATV.start({
 				message: 'An unknown error occurred in the application. Please try again later.'
 			}),
 			'503': () => errorTpl({
-				title: '500',
+				title: '503',
 				message: 'An unknown error occurred in the application. Please try again later.'
 			})
 		}
@@ -59,7 +59,7 @@ ATV.start({
 			}
 		}
 	},
-	onLaunch(options) {
-		ATV.Navigation.navigate('home');
+	onLaunch(creds) {
+		ATV.Navigation.navigate('list-games');
 	}
 });

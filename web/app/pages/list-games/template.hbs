@@ -1,0 +1,21 @@
+<document>
+  <listTemplate>
+    <list>
+      <header>
+        <title>TODAY'S NBA GAMES</title>
+      </header>
+      <section>
+        {{#each data}}
+          <listItemLockup data-uuid="{{uuid}}" accessibilityText="Accessible alert template">
+            <title>{{title}}</title>
+            <relatedContent>
+              <lockup>
+                <description class="descriptionLayout"></description>
+              </lockup>
+            </relatedContent>
+          </listItemLockup>
+        {{/each}}
+      </section>
+    </list>
+  </listTemplate>
+</document>
