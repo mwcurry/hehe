@@ -2,6 +2,10 @@
 *.log
 .DS_Store
 
+#Sublime Text
+*.sublime-project
+*.sublime-workspace
+
 # Web
 node_modules
 bower_components
