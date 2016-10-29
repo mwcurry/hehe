@@ -46,12 +46,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
         
         appControllerContext.launchOptions["BASEURL"] = AppDelegate.TVBaseURL
         
-        if let launchOptions = launchOptions as? [String: AnyObject] {
-            for (kind, value) in launchOptions {
-                appControllerContext.launchOptions[kind] = value
-            }
-        }
-
         appController = TVApplicationController(context: appControllerContext, window: window, delegate: self)
         
         return true
