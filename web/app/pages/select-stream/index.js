@@ -7,7 +7,6 @@ let Page = ATV.Page.create({
 	type: 'modal',
 	template: template,
     data: function(response) {
-    	console.log(response)
         return response;
     },
     ready(options, resolve, reject) {

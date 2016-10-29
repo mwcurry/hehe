@@ -36,6 +36,7 @@ let Page = ATV.Page.create({
 	onSelect(e) {
 		let element = e.target;
 		let uuid = element.getAttribute('data-uuid');
+        let title = element.getAttribute('data-title');
 		if (uuid) {
 			ATV.Navigation.navigate('select-stream', {uuid : uuid});
 		}

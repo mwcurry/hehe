@@ -7,7 +7,7 @@
       <section>
         {{#each data}}
           {{#if ready}}
-            <listItemLockup data-uuid="{{uuid}}" accessibilityText="{{title}}">
+            <listItemLockup data-uuid="{{uuid}}" data-title="{{title}}" accessibilityText="{{title}}">
               <title>{{title_without_date}} - {{prettify start}}</title>
               <relatedContent>
                 <lockup>
