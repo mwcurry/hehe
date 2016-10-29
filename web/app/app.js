@@ -59,7 +59,7 @@ ATV.start({
 			}
 		}
 	},
-	onLaunch(creds) {
+	onLaunch() {
 		ATV.Navigation.navigate('list-games');
 	}
 });

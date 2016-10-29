@@ -13,6 +13,11 @@ function background_image(img = '', className = '') {
     return `<background><img class="${className}" src="${imageUrl(img)}" /></background>`;
 }
 
+function prettify(timestamp) {
+	return new Date(timestamp).toLocaleTimeString()
+}
+
+
 const helpers = {
 	toJSON(obj = {}) {
 		let str;
@@ -31,6 +36,9 @@ const helpers = {
 	},
 	background_image(img) {
 		return new Handlebars.SafeString(background_image(img));
+	},
+	prettify(timestamp) {
+		return new Handlebars.SafeString(prettify(timestamp));
 	}
 };
 

@@ -6,14 +6,16 @@
       </header>
       <section>
         {{#each data}}
-          <listItemLockup data-uuid="{{uuid}}" accessibilityText="Accessible alert template">
-            <title>{{title}}</title>
-            <relatedContent>
-              <lockup>
-                <description class="descriptionLayout"></description>
-              </lockup>
-            </relatedContent>
-          </listItemLockup>
+          {{#if ready}}
+            <listItemLockup data-uuid="{{uuid}}" accessibilityText="{{title}}">
+              <title>{{title_without_date}} - {{prettify start}}</title>
+              <relatedContent>
+                <lockup>
+                  <description class="descriptionLayout">{{title}}</description>
+                </lockup>
+              </relatedContent>
+            </listItemLockup>
+          {{/if}}
         {{/each}}
       </section>
     </list>
