@@ -1,4 +1,7 @@
-# TVML Catalog: Using atvjs framework
+# Hehestreams AppleTV App
+A simple appleTV application to watch hehestreams directly.
+
+### Credit & Attribution
 This is a port of the original [TVML Catalog Sample Code](https://developer.apple.com/library/tvos/samplecode/TVMLCatalog/Introduction/Intro.html) re-written using [atvjs](https://github.com/emadalam/atvjs) framework. Refer to the framework documentation for its usage details.
 
 ### Getting Started
