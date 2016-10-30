@@ -1,7 +1,7 @@
 {
-  "name": "tvml-catalog-using-atvjs",
+  "name": "hehestreams AppleTV App",
   "version": "1.0.0",
-  "description": "Port of the original TVML Catalog Sample Code re-written using atvjs framework.",
+  "description": "AppleTV web app to stream hehestreams based on Emad Alam <emad.alam@yahoo.com>'s TVMLCatalog app ",
   "main": "web/app/app.js",
   "scripts": {
     "start": "gulp",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/emadalam/tvml-catalog-using-atvjs.git"
+    "url": "https://github.com/mwcurry/hehe.git"
   },
   "keywords": [
     "atvjs",
@@ -18,15 +18,16 @@
     "tvml",
     "tvjs",
     "appletv",
-    "catalog",
-    "sample"
+    "hehe",
+    "basketball",
+    "hehestreams"
   ],
-  "author": "Emad Alam <emad.alam@yahoo.com>",
+  "author": "Matt Curry <mwcurry@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/emadalam/tvml-catalog-using-atvjs/issues"
+    "url": "https://github.com/mwcurry/hehe/issues"
   },
-  "homepage": "https://github.com/emadalam/tvml-catalog-using-atvjs#readme",
+  "homepage": "https://github.com/mwcurry/hehe",
   "devDependencies": {
     "babel-core": "6.1.21",
     "babel-loader": "6.2.0",
