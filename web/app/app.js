@@ -67,6 +67,7 @@ ATV.start({
 		var header = {
             ApiKey: key
         };
-		ATV.Navigation.navigate('list-games', {header : header});
+        ATV.Settings.set("header", header);
+		ATV.Navigation.navigate('list-games');
 	}
 });
