@@ -1,7 +1,6 @@
 # General
 *.log
 .DS_Store
-web/app/config.json
 
 #Sublime Text
 *.sublime-project
@@ -16,6 +15,8 @@ node_modules
 node_modules/
 bower_components
 web/public
+web/app/config.json
+/web/app/config.json
 
 # Xcode
 #
