@@ -1,6 +1,7 @@
 # General
 *.log
 .DS_Store
+web/app/config.json
 
 #Sublime Text
 *.sublime-project
