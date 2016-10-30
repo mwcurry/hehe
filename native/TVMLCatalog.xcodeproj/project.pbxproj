@@ -89,6 +89,7 @@
 				TargetAttributes = {
 					65AE40781B8C3649006FB795 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 7TW7N79S8F;
 						LastSwiftMigration = 0810;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
@@ -227,9 +228,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7TW7N79S8F;
 				INFOPLIST_FILE = TVMLCatalog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.atvjs.TVMLCatalog;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mwcurry.Ballviewer;
 				PRODUCT_NAME = "TVML Catalog";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
@@ -243,9 +245,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7TW7N79S8F;
 				INFOPLIST_FILE = TVMLCatalog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.atvjs.TVMLCatalog;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mwcurry.Ballviewer;
 				PRODUCT_NAME = "TVML Catalog";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;

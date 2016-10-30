@@ -12,7 +12,7 @@ var withTests = $.util.env.tests;
 var isProduction = (environment === 'production');
 var webpackConfig = require('./webpack.config.js')[environment];
 
-var port = $.util.env.port || 9001;
+var port = $.util.env.port || 8080;
 var src = 'web/app/';
 var dist = 'web/public/';
 

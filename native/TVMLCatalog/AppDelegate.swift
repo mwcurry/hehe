@@ -15,7 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
     
     var appController: TVApplicationController?
     
-    static let TVBaseURL = "http://mwcurry.com/web/app/"
+    //static let TVBaseURL = "http://hehesatv.cfapps.io/"
+    //static let TVBaseURL = "http://127.0.0.1/"
+    
+    static let TVBaseURL = "http://hehesatv.cfapps.io/"
     
     static let TVBootURL = "\(AppDelegate.TVBaseURL)app.js"
 
