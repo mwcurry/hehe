@@ -6,13 +6,13 @@
 *.sublime-project
 *.sublime-workspace
 
-
 #PCF
 manifest.yaml
 .cfignore
 
 # Web
 node_modules
+node_modules/
 bower_components
 web/public
 

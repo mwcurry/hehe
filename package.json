@@ -1,5 +1,5 @@
 {
-  "name": "hehestreams AppleTV App",
+  "name": "hehe-appletv",
   "version": "1.0.0",
   "description": "AppleTV web app to stream hehestreams based on Emad Alam <emad.alam@yahoo.com>'s TVMLCatalog app ",
   "main": "web/app/app.js",
