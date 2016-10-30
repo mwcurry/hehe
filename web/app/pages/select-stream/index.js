@@ -12,12 +12,9 @@ let Page = ATV.Page.create({
     ready(options, resolve, reject) {
     	//http://hehestreams.xyz/api/v1/nba/games/b4d071386ba15a5b/streams
         let streamList = 'http://hehestreams.xyz/api/v1/nba/games/' + options.uuid + '/streams'
-        let key = {
-            ApiKey: 'igLnX4x2'
-        };
          ATV
         .Ajax
-        .get(streamList, {headers:key})
+        .get(streamList, {headers:options.header})
         .then((xhr) => {
             let response = xhr.response;
             resolve({

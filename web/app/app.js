@@ -13,6 +13,9 @@ import 'pages';
 import ParadePage from 'pages/parade';
 import CatalogPage from 'pages/catalog';
 
+var config = require('./config.json');
+
+
 ATV.start({
 	style: css,
 	menu: {
@@ -60,6 +63,10 @@ ATV.start({
 		}
 	},
 	onLaunch() {
-		ATV.Navigation.navigate('list-games');
+		var key = JSON.parse(config).key;
+		var header = {
+            ApiKey: key
+        };
+		ATV.Navigation.navigate('list-games', {header : header});
 	}
 });

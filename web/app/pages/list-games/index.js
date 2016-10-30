@@ -11,12 +11,9 @@ let Page = ATV.Page.create({
     },
     ready(options, resolve, reject) {
         let heheGames = 'http://hehestreams.xyz/api/v1/nba/games';
-        let key = {
-            ApiKey: 'igLnX4x2'
-        };
          ATV
         .Ajax
-        .get(heheGames, {headers:key})
+        .get(heheGames, {headers:options.header})
         .then((xhr) => {
             let response = xhr.response;
             resolve({
@@ -38,7 +35,7 @@ let Page = ATV.Page.create({
 		let uuid = element.getAttribute('data-uuid');
         let title = element.getAttribute('data-title');
 		if (uuid) {
-			ATV.Navigation.navigate('select-stream', {uuid : uuid});
+			ATV.Navigation.navigate('select-stream', {uuid : uuid, header:options.header});
 		}
 	}
 });
