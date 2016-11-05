@@ -69,5 +69,8 @@ ATV.start({
         };
         ATV.Settings.set("header", header);
 		ATV.Navigation.navigate('list-games');
+	},
+	onResume() {
+		ATV.Navigation.navigate('list-games');
 	}
 });
