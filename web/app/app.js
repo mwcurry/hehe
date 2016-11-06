@@ -57,17 +57,14 @@ ATV.start({
 				let showDescription = element.getAttribute('allowsZooming');
 
 				if (showDescription) {
-					ATV.Navigation.presentModal(`<document><alertTemplate><description class="text-justified">${element.textContent}</description></alertTemplate></document>`);
+						(`<document><alertTemplate><description class="text-justified">${element.textContent}</description></alertTemplate></document>`);
 				}
 			}
 		}
 	},
 	onLaunch() {
 		var key = JSON.parse(config).key;
-		var header = {
-            ApiKey: key
-        };
-        ATV.Settings.set("header", header);
+        ATV.Settings.set("header", {ApiKey: key});
 		ATV.Navigation.navigate('list-games');
 	},
 	onResume() {
