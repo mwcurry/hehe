@@ -9,27 +9,13 @@ import loaderTpl from 'shared/templates/loader.hbs';
 import errorTpl from 'shared/templates/error.hbs';
 // all pages
 import 'pages';
-// menu pages
-import ParadePage from 'pages/parade';
-import CatalogPage from 'pages/catalog';
+
 
 var config = require('./config.json');
 
 
 ATV.start({
 	style: css,
-	menu: {
-		attributes: {},
-		items: [{
-			id: 'parade',
-			name: 'Tab 1',
-			page: ParadePage
-		}, {
-			id: 'catalog',
-			name: 'Tab 2',
-			page: CatalogPage
-		}]
-	},
 	templates: {
 		loader: loaderTpl,
 		error: errorTpl,

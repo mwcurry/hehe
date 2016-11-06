@@ -7,8 +7,8 @@ let Page = ATV.Page.create({
 	type: 'modal',
 	template: template,
     ready(options, resolve, reject) {
-        console.log(options.title);
-        let streamList = 'http://hehestreams.xyz/api/v1/nba/games/' + options.uuid + '/streams'
+        ATV.Navigation.showLoading("Loading Streams…");
+        let streamList = 'http://hehestreams.xyz/api/v1/nba/games/' + options.uuid + '/streams';
          ATV
         .Ajax
         .get(streamList, {headers : ATV.Settings.get("header")})
