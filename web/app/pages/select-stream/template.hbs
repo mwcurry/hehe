@@ -1,8 +1,8 @@
 <document>
   <alertTemplate>
-    <title>{{Title}}</title>
+    <title>{{data.title}}</title>
     <description>Select Stream</description>
-    {{#each data}}
+    {{#each data.stream}}
       <button data-alert-dissmiss="true" data-url="{{url}}">
         <text>{{source}}</text>
       </button>

@@ -6,25 +6,26 @@ let Page = ATV.Page.create({
 	name: 'select-stream',
 	type: 'modal',
 	template: template,
-    data: function(response) {
-        return response;
-    },
     ready(options, resolve, reject) {
-        let header = ATV.Settings.get("header");
+        console.log(options.title);
         let streamList = 'http://hehestreams.xyz/api/v1/nba/games/' + options.uuid + '/streams'
          ATV
         .Ajax
-        .get(streamList, {headers : header})
+        .get(streamList, {headers : ATV.Settings.get("header")})
         .then((xhr) => {
-            let response = xhr.response;
+            let response = {
+                title: options.title,
+                stream: xhr.response
+            }
             resolve({
                 data: response
             });
         }, (xhr) => {
             let response = xhr.response;
+            console.log(response);
             reject({
                 status: xhr.status,
-                message: response.message
+                message: response.error
             });
         });
     },

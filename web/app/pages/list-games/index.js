@@ -1,15 +1,12 @@
 import ATV from 'atvjs';
 
 import template from './template.hbs';
+
 let Page = ATV.Page.create({
 	name: 'list-games',
     template: template,
-    data(response) {
-        console.log(response);
-        return response;
-    },
     ready(options, resolve, reject) {
-        let heheGames = 'http://hehestreams.xyz/api/v1/nba/games';
+        let heheGames = 'http://hehestreams.xyz/api/v1/nba/games?date=2016-11-05';
         ATV
         .Ajax
         .get(heheGames, {headers : ATV.Settings.get("header")})
@@ -34,7 +31,7 @@ let Page = ATV.Page.create({
 		let uuid = element.getAttribute('data-uuid');
         let title = element.getAttribute('data-title');
 		if (uuid) {
-			ATV.Navigation.navigate('select-stream', {uuid : uuid});
+			ATV.Navigation.navigate('select-stream', {uuid : uuid, title: title});
 		}
 	}
 });
