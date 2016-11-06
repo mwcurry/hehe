@@ -14,7 +14,8 @@ function background_image(img = '', className = '') {
 }
 
 function prettify(timestamp) {
-	return new Date(timestamp).toLocaleTimeString()
+	var options = { timeZoneName: 'short' };
+	return new Date(timestamp).toLocaleTimeString('en-US', options);
 }
 
 

@@ -1,22 +1,18 @@
 import ATV from 'atvjs';
 
 import template from './template.hbs';
-
-
 let Page = ATV.Page.create({
 	name: 'list-games',
     template: template,
-    data: function(response) {
+    data(response) {
+        console.log(response);
         return response;
     },
     ready(options, resolve, reject) {
-        let header = ATV.Settings.get("header");
-        console.log("HEADER")
-        console.log(header)
         let heheGames = 'http://hehestreams.xyz/api/v1/nba/games';
-         ATV
+        ATV
         .Ajax
-        .get(heheGames, {headers : header})
+        .get(heheGames, {headers : ATV.Settings.get("header")})
         .then((xhr) => {
             let response = xhr.response;
             resolve({
