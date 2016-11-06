@@ -7,7 +7,7 @@ let Page = ATV.Page.create({
     template: template,
     ready(options, resolve, reject) {
         ATV.Navigation.showLoading("Loading Games…");
-        let heheGames = 'http://hehestreams.xyz/api/v1/nba/games?date=2016-11-05';
+        let heheGames = 'http://hehestreams.xyz/api/v1/nba/games';
         ATV
         .Ajax
         .get(heheGames, {headers : ATV.Settings.get("header")})
